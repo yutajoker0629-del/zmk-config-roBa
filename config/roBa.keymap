@@ -1,49 +1,27 @@
 // OS設定を日本語キーボードのまま使用するための変換定義
 
 #define JP_DQUOTE       AT                // "
-
 #define JP_AMPERSAND    CARET             // &
-
 #define JP_QUOTE        AMPERSAND         // '
-
 #define JP_EQUAL        UNDER             // =
-
 #define JP_CARET        EQUAL             // ^
-
 #define JP_YEN          0x89              // ¥
-
 #define JP_PLUS         COLON             // +
-
 #define JP_TILDE        PLUS              // ~
-
 #define JP_PIPE         LS(0x89)          // |
-
 #define JP_AT           LEFT_BRACKET      // @
-
 #define JP_COLON        SINGLE_QUOTE      // :
-
 #define JP_ASTERISK     DOUBLE_QUOTES     // *
-
 #define JP_BACKQUOTE    LEFT_BRACE        // `
-
 #define JP_UNDERSCORE   LS(0x87)          // _
-
 #define JP_LBRACKET     RIGHT_BRACKET     // [
-
 #define JP_RBRACKET     BACKSLASH         // ]
-
 #define JP_LPAREN       ASTERISK          // (
-
 #define JP_RPAREN       LEFT_PARENTHESIS  // )
-
 #define JP_LBRACE       RIGHT_BRACE       // {
-
 #define JP_RBRACE       PIPE              // }
-
 #define JP_KANA         LANGUAGE_1        // かな
-
 #define JP_EISU         LANGUAGE_2        // 英数
-
 #define JP_HANZEN       GRAVE             // 半角/全角
 
 #include <behaviors.dtsi>
@@ -69,7 +47,6 @@
     //         <&kp LEFT_ARROW>,
     //         <&kp UP_ARROW>,
     //         <&kp DOWN_ARROW>;
-
     //     tick = <10>;
     //     wait-ms = <5>;
     //     tap-ms = <5>;
@@ -114,17 +91,18 @@
             label = "TO_LAYER_0";
         };
 
-
         // 追加するマクロ（日本語キーボード対応版）
+
         parenthesis: parenthesis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+
             // LANG_HANJAを削除し、日本語用のカッコ（JP_LPAREN, JP_RPAREN）に変更
+
             bindings = <&kp JP_LPAREN &kp JP_RPAREN &kp LEFT_ARROW>;
             label = "parenthesis";
         };
     };
-
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
@@ -135,30 +113,32 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-// 新しいスクロール動作の追加
+
+        // 新しいスクロール動作の追加
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             // 追加: スクロールのタップ時間を設定 (20ms)
+
             tap-ms = <20>;
         };
     };
-
-
 
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                   &kp T                                                   &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                   &kp G        &kp LS(LG(S))               &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp JP_QUOTE
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                   &kp B        &kp JP_COLON                &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 JP_EISU&lt 2 SPACE  &lt_to_layer_0 3 JP_KANA    &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W         &kp E         &kp R                     &kp T                                                     &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp A             &kp S         &kp D         &kp F                     &kp G        &kp LS(LG(S))                 &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp JP_QUOTE
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                     &kp B        &kp JP_COLON                  &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 JP_EISU  &lt 2 SPACE  &lt_to_layer_0 3 JP_KANA      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNCTION {
@@ -172,10 +152,10 @@
 
         NUM {
             bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp N7        &kp N8        &kp N9        &kp RIGHT_PARENTHESIS
+&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERCENT
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH
+&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                      &kp PIPE
             >;
         };
 
