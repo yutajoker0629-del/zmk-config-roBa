@@ -92,6 +92,7 @@
         };
 
         // ( ) 用（変更なし）
+
         parenthesis: parenthesis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -100,10 +101,13 @@
         };
 
         // { } から 【 】 に変更
+
         brace: brace {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
+
             // 日本語PCで [ ] の場所を打つと 【 】 が出ます
+
             bindings = <&kp JP_LBRACKET &kp JP_RBRACKET &kp LEFT_ARROW>;
             label = "brace";
         };
@@ -132,6 +136,7 @@
         };
 
         // 1回なら丸カッコ、2回なら隅付きカッコ
+
         td_bracket: td_bracket {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_BRACKET";
@@ -139,7 +144,6 @@
             tapping-term-ms = <200>;
             bindings = <&parenthesis>, <&brace>;
         };
-
     };
 
     keymap {
@@ -148,8 +152,8 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R                     &kp T                                                     &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                     &kp G        &kp LS(LG(S))                 &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp JP_QUOTE
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                     &kp B        &kp JP_COLON                  &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp A             &kp S         &kp D         &kp F                     &kp G        &td_bracket                   &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp JP_QUOTE
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                     &kp B        &kp CAPSLOCK                  &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 JP_EISU  &lt 2 SPACE  &lt_to_layer_0 3 JP_KANA      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
