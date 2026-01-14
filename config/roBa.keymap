@@ -91,17 +91,23 @@
             label = "TO_LAYER_0";
         };
 
-        // 追加するマクロ（日本語キーボード対応版）
-
+        // ( ) 用（変更なし）
         parenthesis: parenthesis {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-
-            // LANG_HANJAを削除し、日本語用のカッコ（JP_LPAREN, JP_RPAREN）に変更
-
             bindings = <&kp JP_LPAREN &kp JP_RPAREN &kp LEFT_ARROW>;
             label = "parenthesis";
         };
+
+        // { } から 【 】 に変更
+        brace: brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            // 日本語PCで [ ] の場所を打つと 【 】 が出ます
+            bindings = <&kp JP_LBRACKET &kp JP_RBRACKET &kp LEFT_ARROW>;
+            label = "brace";
+        };
+    };
     };
 
     behaviors {
@@ -125,6 +131,16 @@
 
             tap-ms = <20>;
         };
+
+        // 1回なら丸カッコ、2回なら隅付きカッコ
+        td_bracket: td_bracket {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_BRACKET";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&parenthesis>, <&brace>;
+        };
+
     };
 
     keymap {
