@@ -167,7 +167,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 CAPSLOCK  &mt LEFT_SHIFT SPACE  &lt 1 JP_KANA      &kp BACKSPACE  &lt 2 ENTER                             &kp LEFT_ALT
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp UP_ARROW DOWN_ARROW>;
         };
 
         FUNCTION {
