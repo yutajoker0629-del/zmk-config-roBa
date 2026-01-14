@@ -112,17 +112,20 @@
         triggers-per-rotation = <10>;
     };
 
-    trackball_listener: trackball_listener {
+trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
-        status = "disabled";
+        status = "disabled"; // ★ここも "okay" になっている必要があります
     };
-};
+}; // / ブロックの終わり
 
 &spi0 {
-    status = "disabled";
+    status = "okay"; // ★ここが "okay" か確認
 
     trackball: trackball@0 {
-        status = "disabled";
+        status = "okay"; // ★ここも "okay" か確認
         reg = <0>;
+        // ここに以前提案したレイヤー設定を書きます
+        automouse-layer = <4>;
+        scroll-layers = <1 5>; 
     };
 };
