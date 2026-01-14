@@ -151,7 +151,7 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                     &kp T                                                     &kp Y        &kp U  &lt 5 I    &kp O    &kp P
+&kp TAB           &kp W         &kp E         &kp R                     &kp T                                                     &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S         &kp D         &kp F                     &kp G        &td_bracket                   &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp JP_QUOTE
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                     &kp B        &kp CAPSLOCK                  &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 JP_EISU  &lt 2 SPACE  &lt_to_layer_0 3 JP_KANA      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
