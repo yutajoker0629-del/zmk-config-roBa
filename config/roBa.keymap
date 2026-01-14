@@ -9,7 +9,7 @@
 #define JP_PLUS         COLON             // +
 #define JP_TILDE        PLUS              // ~
 #define JP_PIPE         LS(0x89)          // |
-#define JP_AT           LEFT_BRACKET      // @
+#define JP_AT           LEFT_BRACKET      // @ 
 #define JP_COLON        SINGLE_QUOTE      // :
 #define JP_ASTERISK     DOUBLE_QUOTES     // *
 #define JP_BACKQUOTE    LEFT_BRACE        // `
