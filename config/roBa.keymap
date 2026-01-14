@@ -108,7 +108,6 @@
             label = "brace";
         };
     };
-    };
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
