@@ -119,13 +119,10 @@ trackball_listener: trackball_listener {
 }; // / ブロックの終わり
 
 &spi0 {
-    status = "okay"; // ★ここが "okay" か確認
+    status = "disabled"; // ←ここを okay に変えたり、中身を消したりしませんでしたか？
 
     trackball: trackball@0 {
-        status = "okay"; // ★ここも "okay" か確認
+        status = "disabled";
         reg = <0>;
-        // ここに以前提案したレイヤー設定を書きます
-        automouse-layer = <4>;
-        scroll-layers = <1 5>; 
     };
 };
