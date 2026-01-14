@@ -22,13 +22,13 @@ layers:
   - J
   - K
   - L
-  - ''''
+  - '&'
   - {t: Z, h: LEFT SHIFT}
   - X
   - C
   - V
   - B
-  - ':'
+  - ''''
   - ;
   - N
   - M
@@ -38,9 +38,9 @@ layers:
   - LCTRL
   - LEFT WIN
   - LEFT ALT
-  - {t: '&to_layer_0 INT_HENKAN', h: '6'}
+  - {t: '&to_layer_0 LANGUAGE_2', h: '6'}
   - {t: SPACE, h: NUM}
-  - {t: '&to_layer_0 INT_MUHENKAN', h: ARROW}
+  - {t: '&to_layer_0 LANGUAGE_1', h: ARROW}
   - BACKSPACE
   - {t: ENTER, h: FUNCTION}
   - DEL
@@ -95,9 +95,9 @@ layers:
   - KP 9
   - +
   - ^
-  - '&'
-  - '~'
-  - (
+  - '7'
+  - '8'
+  - '9'
   - )
   - /
   - KP 4
@@ -107,9 +107,9 @@ layers:
   - Ctl+Alt+KP 0
   - _
   - '!'
-  - '@'
-  - '#'
-  - $
+  - '4'
+  - '5'
+  - '6'
   - '%'
   - {t: KP 0, h: LEFT SHIFT}
   - KP 1
@@ -119,9 +119,9 @@ layers:
   - '='
   - {t: ▽, type: trans}
   - '['
-  - ']'
-  - '{'
-  - '}'
+  - '1'
+  - '2'
+  - '3'
   - \
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
