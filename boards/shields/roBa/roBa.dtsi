@@ -94,13 +94,12 @@
                 ;
     };
 
-left_encoder: encoder_left {
+    left_encoder: encoder_left {
         compatible = "alps,ec11";
-        // D5はトラボ(SPI SCK)と喧嘩するので、必ず D4 に変更します
-        a-gpios = <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <12>;
-        status = "disabled"; // Overlay側で okay になるので disabled でOK
+        status = "disabled";
     };
 
     right_encoder: encoder_right {
@@ -113,14 +112,14 @@ left_encoder: encoder_left {
         triggers-per-rotation = <10>;
     };
 
-trackball_listener: trackball_listener {
+    trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
-        status = "disabled"; // ★ここも "okay" になっている必要があります
+        status = "disabled";
     };
-}; // / ブロックの終わり
+};
 
 &spi0 {
-    status = "disabled"; // ←ここを okay に変えたり、中身を消したりしませんでしたか？
+    status = "disabled";
 
     trackball: trackball@0 {
         status = "disabled";
