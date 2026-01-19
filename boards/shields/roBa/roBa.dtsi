@@ -97,7 +97,7 @@
 left_encoder: encoder_left {
         compatible = "alps,ec11";
         // D5はトラボ(SPI SCK)と喧嘩するので、必ず D4 に変更します
-        a-gpios = <&xiao_d 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         steps = <12>;
         status = "disabled"; // Overlay側で okay になるので disabled でOK
