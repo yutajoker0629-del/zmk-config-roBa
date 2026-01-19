@@ -183,8 +183,8 @@
 
         NUM {
             bindings = <
-&kp F11  &kp F12  &kp F13  &kp F14  &kp F15                             &kp MINUS  &kp N7        &kp N8        &kp N9        &kp PLUS
-&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans         &kp COLON   &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp ASTERISK
+&kp F11  &kp F12  &kp F13  &kp F14  &kp F15                             &kp MINUS  &kp N7        &kp N8        &kp N9        &kp COLON
+&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans         &kp COLON   &kp SLASH  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DOUBLE_QUOTES
 &trans   &kp F2   &kp F3   &kp F4   &kp F5   &kp EQUAL      &kp PERIOD  &kp N0     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH
 &trans   &trans   &trans   &trans   &trans   &trans         &trans      &trans                                               &kp PIPE
             >;
@@ -211,7 +211,7 @@
 &trans  &trans  &trans  &trans  &trans  &mkp MB1      &trans  &trans                          &trans
             >;
 
-           sensor-bindings = <&inc_dec_kp UP DOWN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         SCROLL {
