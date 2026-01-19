@@ -9,7 +9,7 @@
 #define JP_PLUS         COLON             // +
 #define JP_TILDE        PLUS              // ~
 #define JP_PIPE         LS(0x89)          // |
-#define JP_AT           LEFT_BRACKET      // @ 
+#define JP_AT           LEFT_BRACKET      // @
 #define JP_COLON        SINGLE_QUOTE      // :
 #define JP_ASTERISK     DOUBLE_QUOTES     // *
 #define JP_BACKQUOTE    LEFT_BRACE        // `
@@ -167,7 +167,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 CAPSLOCK  &mo 2  &mt LEFT_SHIFT SPACE      &kp BACKSPACE  &lt 2 ENTER                               &mkp MB2
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         FUNCTION {
@@ -178,7 +178,7 @@
 &trans              &trans               &trans     &trans  &trans  &trans      &trans  &trans                                                  &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         NUM {
