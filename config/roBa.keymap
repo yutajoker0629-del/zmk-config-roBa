@@ -167,7 +167,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 CAPSLOCK  &mo 2  &mt LEFT_SHIFT SPACE      &kp BACKSPACE  &lt 2 ENTER                               &mkp MB2
             >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         FUNCTION {
@@ -189,7 +189,7 @@
 &trans   &trans   &trans   &trans   &trans   &trans         &trans      &trans                                               &kp PIPE
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         ARROW {
@@ -200,7 +200,7 @@
 &trans          &trans                  &trans              &trans                   &trans   &trans      &trans  &trans                                                   &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         MOUSE {
@@ -211,7 +211,7 @@
 &trans  &trans  &trans  &trans  &trans  &mkp MB1      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+           sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         SCROLL {
@@ -222,7 +222,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
 
         layer_6 {
@@ -233,7 +233,7 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp UP DOWN>;
         };
     };
 };
