@@ -96,15 +96,17 @@
         combo_to_onishi {
             timeout-ms = <50>;
             key-positions = <31 32>; 
-            bindings = <&df 7>;
+            bindings = <&to_onishi 7>; // 定義したbehaviorを使う
         };
 
         // 大西(7)から標準(0)へ
+        // 大西配置(7)をOFFにすることで、下のレイヤー0を露出させる
         combo_to_default {
             timeout-ms = <50>;
             key-positions = <31 32>;
-            bindings = <&df 0>;
+            bindings = <&to_default 7>; // レイヤー7をOFFにする
         };
+
     };
 
     macros {
@@ -167,6 +169,19 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&parenthesis>, <&brace>;
+        };
+
+// レイヤーを強制的にONにする設定
+        to_onishi: to_onishi {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            toggle-mode = "on";
+        };
+        // レイヤーを強制的にOFFにする設定
+        to_default: to_default {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            toggle-mode = "off";
         };
     };
 
