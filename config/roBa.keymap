@@ -92,18 +92,18 @@
             key-positions = <27 28>;
         };
 
-// 「標準」から「大西配置」へ切り替え
+// 標準(0)から大西(7)へ
         combo_to_onishi {
             timeout-ms = <50>;
-            key-positions = <31 32>; // ここに同時押ししたいキーの番号（Index）を入れる
-            bindings = <&df 7>;      // Layer 7 をデフォルトに設定
+            key-positions = <31 32>; 
+            bindings = <&df 7>;
         };
 
-        // 「大西配置」から「標準」へ戻す
+        // 大西(7)から標準(0)へ
         combo_to_default {
             timeout-ms = <50>;
-            key-positions = <31 32>; // 上と同じキーを指定
-            bindings = <&df 0>;      // Layer 0 をデフォルトに設定
+            key-positions = <31 32>;
+            bindings = <&df 0>;
         };
     };
 
