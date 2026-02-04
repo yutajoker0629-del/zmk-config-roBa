@@ -97,16 +97,18 @@
         combo_to_onishi {
             timeout-ms = <50>;
             key-positions = <28 27>;
-            bindings = <&to_onishi 7>; // 定義したbehaviorを使う
+            bindings = <&to_onishi 1>; // 定義したbehaviorを使う
+            layers = <0 1>;
         };
 
-        // 大西(7)から標準(0)へ
-        // 大西配置(7)をOFFにすることで、下のレイヤー0を露出させる
+        // 大西(1)から標準(0)へ
+        // 大西配置(1)をOFFにすることで、下のレイヤー0を露出させる
 
         combo_to_default {
             timeout-ms = <50>;
             key-positions = <28 27>;
-            bindings = <&to_default 7>; // レイヤー7をOFFにする
+            bindings = <&to_default 1>; // レイヤー7をOFFにする
+            layers = <0 1>;
         };
     };
 
@@ -204,13 +206,24 @@
 
         default_layer {
             bindings = <
-&lt 2 TAB         &kp W         &kp E         &kp R           &kp T                                           &kp Y        &kp U    &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &lt 1 F         &kp G           &mkp MB3         &td_prolong    &kp H        &lt 5 J  &kp K      &kp L    &lt 3 INT4
+&lt 3 TAB         &kp W         &kp E         &kp R           &kp T                                           &kp Y        &kp U    &kp I      &kp O    &kp P
+&kp A             &kp S         &kp D         &lt 2 F         &kp G           &mkp MB3         &td_prolong    &kp H        &lt 6 J  &kp K      &kp L    &lt 4 INT4
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V           &kp B           &kp SPACE        &td_bracket    &kp N        &kp M    &kp COMMA  &kp DOT  &kp DEL
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 CAPSLOCK  &kp LEFT_SHIFT  &lt 2 SPACE      &kp BACKSPACE  &lt 2 ENTER                               &mkp MB2
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 CAPSLOCK  &kp LEFT_SHIFT  &lt 3 SPACE      &kp BACKSPACE  &lt 3 ENTER                               &mkp MB2
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+        };
+
+        oonishi {
+            bindings = <
+&lt 3 TAB  &kp L         &kp U         &kp COMMA   &kp PERIOD                                      &kp F        &kp W    &kp R  &kp Y  &kp P
+&kp E      &kp I         &kp A         &lt 2 O     &kp H           &kp DEL          &td_prolong    &kp K        &lt 6 T  &kp N  &kp S  &lt 4 INTERNATIONAL_4
+&kp Z      &kp X         &kp C         &kp V       &kp B           &kp INT4         &td_bracket    &kp G        &kp D    &kp M  &kp J  &kp DELETE
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 CAPS  &kp LEFT_SHIFT  &lt 3 SPACE      &kp BACKSPACE  &lt 3 ENTER                         &mkp MB2
+            >;
+
+            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNCTION {
@@ -279,15 +292,6 @@
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
-        layer_7 {
-            bindings = <
-&lt 2 TAB  &kp L         &kp U         &kp COMMA   &kp PERIOD                                      &kp F        &kp W    &kp R  &kp Y  &kp P
-&kp E      &kp I         &kp A         &lt 1 O     &kp H           &kp DEL          &td_prolong    &kp K        &lt 5 T  &kp N  &kp S  &lt 3 INTERNATIONAL_4
-&kp Z      &kp X         &kp C         &kp V       &kp B           &kp INT4         &td_bracket    &kp G        &kp D    &kp M  &kp J  &kp DELETE
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 CAPS  &kp LEFT_SHIFT  &lt 2 SPACE      &kp BACKSPACE  &lt 2 ENTER                         &mkp MB2
-            >;
 
-            sensor-bindings = <&scroll_up_down>;
-        };
     };
 };
