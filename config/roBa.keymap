@@ -171,6 +171,14 @@
             bindings = <&parenthesis>, <&brace>;
         };
 
+        td_prolong: td_prolong {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>; 
+            // 1回で「ー」(MINUS)、2回で「～」(JP_TILDE)
+            bindings = <&kp MINUS>, <&kp JP_TILDE>; 
+        };
+
 // レイヤーを強制的にONにする設定
         to_onishi: to_onishi {
             compatible = "zmk,behavior-toggle-layer";
