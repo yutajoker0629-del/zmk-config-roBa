@@ -89,24 +89,25 @@
 
         layer6 {
             bindings = <&mo 6>;
-            key-positions = <27 28>;
+            key-positions = <28 31>;
         };
 
-// 標準(0)から大西(7)へ
+        // 標準(0)から大西(7)へ
+
         combo_to_onishi {
             timeout-ms = <50>;
-            key-positions = <31 32>; 
+            key-positions = <28 27>;
             bindings = <&to_onishi 7>; // 定義したbehaviorを使う
         };
 
         // 大西(7)から標準(0)へ
         // 大西配置(7)をOFFにすることで、下のレイヤー0を露出させる
+
         combo_to_default {
             timeout-ms = <50>;
-            key-positions = <31 32>;
+            key-positions = <28 27>;
             bindings = <&to_default 7>; // レイヤー7をOFFにする
         };
-
     };
 
     macros {
@@ -174,18 +175,23 @@
         td_prolong: td_prolong {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>; 
+            tapping-term-ms = <200>;
+
             // 1回で「ー」(MINUS)、2回で「～」(JP_TILDE)
-            bindings = <&kp MINUS>, <&kp JP_TILDE>; 
+
+            bindings = <&kp MINUS>, <&kp JP_TILDE>;
         };
 
-// レイヤーを強制的にONにする設定
+        // レイヤーを強制的にONにする設定
+
         to_onishi: to_onishi {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
             toggle-mode = "on";
         };
+
         // レイヤーを強制的にOFFにする設定
+
         to_default: to_default {
             compatible = "zmk,behavior-toggle-layer";
             #binding-cells = <1>;
@@ -199,7 +205,7 @@
         default_layer {
             bindings = <
 &lt 2 TAB         &kp W         &kp E         &kp R           &kp T                                           &kp Y        &kp U    &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &lt 1 F         &kp G           &mkp MB3         &kp MINUS      &kp H        &lt 5 J  &kp K      &kp L    &lt 3 INT4
+&kp A             &kp S         &kp D         &lt 1 F         &kp G           &mkp MB3         &td_prolong    &kp H        &lt 5 J  &kp K      &kp L    &lt 3 INT4
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V           &kp B           &kp SPACE        &td_bracket    &kp N        &kp M    &kp COMMA  &kp DOT  &kp DEL
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 CAPSLOCK  &kp LEFT_SHIFT  &lt 2 SPACE      &kp BACKSPACE  &lt 2 ENTER                               &mkp MB2
             >;
