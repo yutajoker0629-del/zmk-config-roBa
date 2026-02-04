@@ -282,7 +282,7 @@
         layer_7 {
             bindings = <
 &lt 2 TAB  &kp L         &kp U         &kp COMMA   &kp PERIOD                                      &kp F        &kp W    &kp R  &kp Y  &kp P
-&kp E      &kp I         &kp A         &lt 1 O     &kp H           &kp DEL          &kp MINUS      &kp K        &lt 5 T  &kp N  &kp S  &lt 3 INTERNATIONAL_4
+&kp E      &kp I         &kp A         &lt 1 O     &kp H           &kp DEL          &td_prolong    &kp K        &lt 5 T  &kp N  &kp S  &lt 3 INTERNATIONAL_4
 &kp Z      &kp X         &kp C         &kp V       &kp B           &kp INT4         &td_bracket    &kp G        &kp D    &kp M  &kp J  &kp DELETE
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 CAPS  &kp LEFT_SHIFT  &lt 2 SPACE      &kp BACKSPACE  &lt 2 ENTER                         &mkp MB2
             >;
