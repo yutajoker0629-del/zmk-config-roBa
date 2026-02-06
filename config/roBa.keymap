@@ -212,7 +212,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 CAPSLOCK  &kp LEFT_SHIFT  &lt 3 SPACE      &kp BACKSPACE  &lt 3 ENTER                               &mkp MB2
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         oonishi {
@@ -234,7 +234,7 @@
 &trans              &trans               &trans     &trans  &trans  &trans      &trans  &trans                                                  &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         NUM {
@@ -245,7 +245,7 @@
 &trans   &trans   &trans   &trans   &trans   &trans         &trans            &trans                                               &kp PIPE
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         ARROW {
@@ -256,7 +256,7 @@
 &trans          &trans                  &trans              &trans                   &trans   &trans      &trans  &trans                                                   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         MOUSE {
@@ -267,7 +267,7 @@
 &trans  &trans  &trans  &trans  &trans  &mkp MB1      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         SCROLL {
@@ -278,7 +278,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         layer_6 {
@@ -289,7 +289,7 @@
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
     };
 };
