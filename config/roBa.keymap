@@ -88,7 +88,7 @@
         };
 
         layer6 {
-            bindings = <&mo 6>;
+            bindings = <&mo 7>;
             key-positions = <28 31>;
         };
 
