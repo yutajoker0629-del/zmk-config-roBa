@@ -218,8 +218,8 @@
         oonishi {
             bindings = <
 &lt 3 TAB  &kp L         &kp U         &kp COMMA   &kp PERIOD                                      &kp F        &kp W    &kp R  &kp Y  &kp P
-&kp E      &kp I         &kp A         &lt 2 O     &kp H           &kp DEL          &td_prolong    &kp K        &lt 6 T  &kp N  &kp S  &lt 4 INTERNATIONAL_4
-&kp Z      &kp X         &kp C         &kp V       &kp B           &kp INT4         &td_bracket    &kp G        &kp D    &kp M  &kp J  &kp DELETE
+&kp E      &kp I         &kp A         &lt 2 O     &kp H           &mkp MB3         &td_prolong    &kp K        &lt 6 T  &kp N  &kp S  &lt 4 INTERNATIONAL_4
+&kp Z      &kp X         &kp C         &kp V       &kp B           &kp SPACE        &td_bracket    &kp G        &kp D    &kp M  &kp J  &kp DELETE
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 3 CAPS  &kp LEFT_SHIFT  &lt 3 SPACE      &kp BACKSPACE  &lt 3 ENTER                         &mkp MB2
             >;
 
