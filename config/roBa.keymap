@@ -144,8 +144,11 @@
         alt_tab_stay: alt_tab_stay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-// 手順: LALTを押し下げる -> TABを叩く (LALTは押し下げたまま終了)
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp TAB>;
+
+            // 手順: LALTを押し下げる -> TABを叩く (LALTは押し下げたまま終了)
+
+            bindings = <&macro_press>, <&kp LALT>, <&macro_tap>, <&kp TAB>;
+
             label = "ALT_TAB_STAY";
         };
     };
@@ -259,7 +262,7 @@
         ARROW {
             bindings = <
 &kp ESCAPE      &kp LC(PAGE_UP)         &kp LG(UP_ARROW)    &kp LC(PAGE_DOWN)        &trans                       &kp LC(LS(LEFT))        &trans          &kp UP_ARROW    &trans           &trans
-&kp LA(TAB)     &kp LG(LEFT_ARROW)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)      &kp END  &trans      &trans  &kp LS(LC(DOWN_ARROW))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&alt_tab_stay   &kp LG(LEFT_ARROW)      &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)      &kp END  &trans      &trans  &kp LS(LC(DOWN_ARROW))  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &kp LG(LC(D))       &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &kp LS(LC(RIGHT))       &trans          &trans          &trans           &trans
 &trans          &trans                  &trans              &trans                   &trans   &trans      &trans  &trans                                                                   &trans
             >;
