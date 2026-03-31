@@ -39,8 +39,7 @@
 &trackball {
     automouse-layer = <5>;
     scroll-layers = <6>;
-    sampling-interval = <40>;
-    time-to-wait-ms = <500>;
+
 
     // arrows {
     //     layers = <3>;
